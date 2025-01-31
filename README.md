@@ -1,9 +1,17 @@
 # Team2Oblig1
 
-- [ ] Høyre kolonne
-  - [ ] SVG 
-- [ ] Venstre kolonne
-  - [ ] Meny
+- [ ] Right column
+  - [ ] Flex
     - [ ] Overview
-    - [ ] My objects
-    - [ ] Upgrades  
+    - [ ] Solar panel images box
+    - [ ] 4 focus information boxes
+    - [ ] Filter period boxes and icons
+      - [ ] month range
+      - [ ] filter style icon
+      - [ ] month selection boxes from range
+      - [ ] sumary information 
+    - [ ] SVG graph
+    - [ ] 2 info boxes
+- [ ] Venstre kolonne
+  - [ ] Grid
+    -  [ ] Nav  
