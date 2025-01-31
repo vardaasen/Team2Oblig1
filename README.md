@@ -11,7 +11,7 @@
       - [ ] month selection boxes from range
       - [ ] sumary information 
     - [ ] SVG graph
-    - [ ] 
+    - [ ] 2 info boxes
 - [ ] Venstre kolonne
   - [ ] Grid
     -  [ ] Nav  
