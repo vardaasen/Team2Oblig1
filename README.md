@@ -4,3 +4,6 @@
   - [ ] SVG 
 - [ ] Venstre kolonne
   - [ ] Meny
+    - [ ] Overview
+    - [ ] My objects
+    - [ ] Upgrades  
