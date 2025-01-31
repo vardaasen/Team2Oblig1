@@ -102,6 +102,11 @@ section{
         font-size: 16px;
         margin: 5px 0;
     }
+    p {
+        font-size: 14px;
+        margin: 0;
+        font-weight: bold;
+    }
 
 
 
