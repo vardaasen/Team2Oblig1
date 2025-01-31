@@ -21,7 +21,12 @@ footer{
 
 
 /* Kim */
-
+.box {
+    border-width: 1em;
+    border: grey;
+    width: 25%;
+    display: flex;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -66,6 +71,7 @@ main {
 main header {
     margin-bottom: 20px;
 }
+
 
 @media print {
     nav, main header {
