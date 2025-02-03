@@ -75,6 +75,17 @@ h1.logo-text {
     transform: translateX(5px);
 }
 
+
+
+svg {
+
+}
+
+picture img {
+    height: auto;
+    border-radius: 8px;
+}
+
 i {
     font-style: normal;
 }
@@ -88,16 +99,25 @@ i {
 }
 
 main {
-    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
     padding: 20px;
     overflow-y: auto;
     height: 100vh;
     box-sizing: border-box;
 }
-
+main header {
+    flex: 3 100%;
+}
 .box-container {
-    display: flex;
-    flex-wrap: wrap;
+    flex: 1 1 25%;
+    
+    gap: 1rem;
+}
+
+.box-container-r2 {
+    flex: 1 1 44%;
+    
     gap: 1rem;
 }
 
@@ -110,21 +130,13 @@ main {
     margin: 5px;
 }
 
-svg {
-    max-width: 100%;
-}
-
-section {
-    display: flex;
-    gap: 15px;
-}
 
 .month {
     display: flex;
     gap: 10px;
 }
 
-.month article {
+.month section {
     width: 120px;
     height: 140px;
     background: white;
@@ -138,11 +150,11 @@ section {
     text-align: center;
 }
 
-.month article:hover {
+.month section:hover {
     transform: translateY(-5px);
 }
 
-.month article i {
+.month section i {
     font-size: 2em;
     margin-bottom: 5px;
 }
@@ -153,7 +165,7 @@ section {
     margin: 0;
 }
 
-.month p {
+.month i {
     font-size: 16px;
     color: #FF914D;
     font-weight: bold;
@@ -206,13 +218,3 @@ section {
 @media screen and (min-width: 800px) {  
 }
 
-.overview-panel {
-    display: flex;
-    flex-direction: row;
-}
-
-picture img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
