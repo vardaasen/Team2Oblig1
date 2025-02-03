@@ -131,7 +131,10 @@ main {
     font-weight: bold;
     margin: 0;
 }
-
+img {
+    height: 33vh;
+    width: 33vv;
+}
 svg {
     width: 100%;
     max-width: 670px;
