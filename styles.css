@@ -45,7 +45,7 @@ nav {
     margin-bottom: 20px;
 }
 
-.logo-text {
+h1.logo-text {
     font-size: 24px;
     font-weight: bold;
 }
@@ -91,30 +91,54 @@ main {
     box-sizing: border-box;
 }
 
-.month {
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+}
+
+svg {
+    max-width: 100%;
+}
+
+section {
     display: flex;
     gap: 15px;
-    flex-wrap: wrap;
+}
+
+.month {
+    display: flex;
+    gap: 10px;
 }
 
 .month article {
-    width: 140px;
+    width: 120px;
+    height: 140px;
     background: white;
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    transition: transform 0.3s ease;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
 }
 
 .month article:hover {
     transform: translateY(-5px);
 }
 
-.month .icon {
+.month article i {
     font-size: 2em;
     margin-bottom: 5px;
 }
@@ -130,12 +154,6 @@ main {
     color: #FF914D;
     font-weight: bold;
     margin: 0;
-}
-
-svg {
-    width: 100%;
-    max-width: 670px;
-    height: auto;
 }
 
 @media print {
@@ -184,85 +202,13 @@ svg {
 @media screen and (min-width: 800px) {  
 }
 
-.box-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.box {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin: 5px;
-    transition: transform 0.3s ease;
-}
-
-.box:hover {
-    transform: translateY(-3px);
-}
-
 .overview-panel {
     display: flex;
     flex-direction: row;
-}
-
-section {
-    display: flex;
-    gap: 15px;
-}
-
-svg {
-    max-width: 100%;
 }
 
 picture img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-}
-
-.filter-content {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.filter-icons {
-    display: flex;
-    gap: 10px;
-}
-
-.month-selection {
-    background: #f5f5f5;
-    padding: 10px;
-    border-radius: 6px;
-}
-
-.summary {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.status-indicator {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.box h3 {
-    color: #666;
-    margin-bottom: 8px;
-}
-
-.box p {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333;
 }
