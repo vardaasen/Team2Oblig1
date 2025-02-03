@@ -1,5 +1,13 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
     display: flex;
     height: 100vh;
     margin: 0;
@@ -22,13 +30,57 @@ body {
 nav {
     background-color: #343a40;
     color: white;
-    width: 200px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
     height: 100vh;
     box-sizing: border-box;
+}
+
+.logo {
+    text-align: center;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #FF914D;
+}
+
+.menu, .bottom-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-item {
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover, .menu-item.active {
+    background-color: #FF914D;
+    transform: translateX(5px);
+}
+
+.icon {
+    font-size: 1.2em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
 }
 
 main {
@@ -39,54 +91,45 @@ main {
     box-sizing: border-box;
 }
 
-.box-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.box {
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 5px;
-}
-
-svg {
-    max-width: 100%;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    display: block;
-}
-
-nav a:hover {
-    background-color: #495057;
-}
-
-section {
+.month {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
-.months {
-    width: 120px;
-    height: 140px;
+.month article {
+    width: 140px;
     background: white;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 10px;
-    text-align: center;
+    gap: 8px;
+    transition: transform 0.3s ease;
+}
+
+.month article:hover {
+    transform: translateY(-5px);
+}
+
+.month .icon {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.month h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.month p {
+    font-size: 16px;
+    color: #FF914D;
+    font-weight: bold;
+    margin: 0;
 }
 
 @media print {
