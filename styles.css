@@ -75,6 +75,10 @@ h1.logo-text {
     transform: translateX(5px);
 }
 
+i {
+    font-style: normal;
+}
+
 .icon {
     font-size: 1.2em;
     display: inline-flex;
