@@ -132,6 +132,12 @@ main {
     margin: 0;
 }
 
+svg {
+    width: 100%;
+    max-width: 670px;
+    height: auto;
+}
+
 @media print {
     nav, main header {
         display: none;
