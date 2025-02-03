@@ -1,24 +1,22 @@
 body {
-font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  height: 100vh;
-  gap: 0;
-  margin: 0;
-  position: relative;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
 
 .hamburger-menu {
     display: none;
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: #343a40;
-    cursor: pointer;
-    padding: 15px;
+    font-size: 18px;
+    padding: 5px;
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 1000;
+    z-index: 2000;
+    background: white;
+    border: none;
+    cursor: pointer;
 }
 
 nav {
@@ -29,48 +27,34 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
-    margin-right: 2%;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 main {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.overview-panel{
-    display: flex;
-    flex-direction: row;
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 .box-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem; 
+    gap: 1rem;
 }
 
 .box {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
+    background: white;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
     margin: 5px;
-}
-
-picture {
-    
 }
 
 svg {
     max-width: 100%;
-}
-
-nav header {
-    text-align: center;
 }
 
 nav a {
@@ -79,7 +63,6 @@ nav a {
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
-    transition: background-color 0.3s;
     display: block;
 }
 
@@ -87,14 +70,14 @@ nav a:hover {
     background-color: #495057;
 }
 
-section{
+section {
     display: flex;
     gap: 15px;
 }
 
-.months{
+.months {
     width: 120px;
-    height:140px;
+    height: 140px;
     background: white;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -106,20 +89,9 @@ section{
     text-align: center;
 }
 
-h2 {
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-p {
-    font-size: 14px;
-    margin: 0;
-    font-weight: bold;
-}
-
 @media print {
     nav, main header {
-        display: none
+        display: none;
     }
 }
 
@@ -139,8 +111,10 @@ p {
         height: 100vh;
         margin: 0;
         transition: left 0.3s ease;
-        z-index: 999;
+        z-index: 1500;
         width: 250px;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+        padding-top: 50px;
     }
     
     nav.active {
@@ -148,9 +122,13 @@ p {
     }
 
     main {
-        margin-left: 0;
-        padding-top: 60px;
         width: 100%;
+        box-sizing: border-box;
+        padding-top: 50px;
+    }
+
+    section {
+        flex-direction: column;
     }
 }
 
