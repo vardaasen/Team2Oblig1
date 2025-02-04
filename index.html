@@ -90,10 +90,12 @@
       
 
       <section class="box-container">
-
-        <select name="date-range" id="date-range">
-          <option>01.06.2023 - 30.09.2023</option>
-        </select>
+        <section class="filter">
+          <select name="date-range" id="date-range">
+            <option>01.06.2023 - 30.09.2023</option>
+          </select>
+          <img src="assets/filter-f.svg" alt="Filter Icon" width="24" height="20" />
+        </section>
         <section class="month">
           <article>
             <h2>Jun</h2>
@@ -116,7 +118,16 @@
             <p>243 kwh</p>
           </article>
         </section>
-        <section>summary information</section>
+        <section class="box month-summary">
+          <section class="left">
+            <p>Min/Max Used</p>
+            <p>Total Used</p>    
+          </section>
+          <section class="right">
+            <p>August 189 kWh / July 301 kWh</p>
+            <p>318 kWh</p>
+          </section>
+        </section>
       </section>
       <section class="box-container-r2">
       <section class="box">

@@ -296,6 +296,24 @@ select{
     color: green;
   }
 
+  .filter{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .month-summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .right{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-weight: bold;
+    }
+
 @media print {
     nav, main header {
         display: none;
