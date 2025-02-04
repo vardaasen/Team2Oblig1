@@ -37,18 +37,20 @@
     <main>
       <header>
         <h1>Overview</h1>
-        <svg>
-          <line />
-        </svg>
       </header>
       <section class="box-container">
         <section class="box">
-          <picture>
+          <p>
+            <i class="bold">450 FASHION AVE, NY, USA</i>
+            <select></select>
+          </p>
+          <picture class="address-img">
               <img width="100%" src="assets/SolarPanels.jpg" />
+              <img width="100%" src="assets/rooftop-solar.jpg" />
           </picture>
         </section>
       </section>
-      <section class="box-container">
+      <section class="box-container-mid">
             <section class="box">A 320 190</section>
             <br>
             <section class="box">250</section>
@@ -60,30 +62,31 @@
       
 
       <section class="box-container">
-        Filter period boxes and icons
-        <section class="box">month range</section>
-        <section class="box">filter style icon</section>
+
+        <select name="date-range" id="date-range">
+          <option>01.06.2023 - 30.09.2023</option>
+        </select>
         <section class="month">
-          <p>
-            <h2>June</h2>
+          <article>
+            <h2>Jun</h2>
             <i class="icon">☀️</i>
-            <i>280 kwh</i>
-          </p>
-          <p>
-            <h2>July</h2>
+            <p>280 kwh</p>
+          </article>
+          <article>
+            <h2>Jul</h2>
             <i class="icon">☀️</i>
-            <i>301 kwh</i>
-          </p>
-          <p>
-            <h2>August</h2>
+            <p>301 kwh</p>
+          </article>
+          <article>
+            <h2>Aug</h2>
             <i class="icon">⛅</i>
-            <i>189 kwh</i>
-          </p>
-          <p>
-            <h2>September</h2>
+            <p>189 kwh</p>
+          </article>
+          <article>
+            <h2>Sept</h2>
             <i class="icon">🌤️</i>
-            <i>243 kwh</i>
-          </p>
+            <p>243 kwh</p>
+          </article>
         </section>
         <section>summary information</section>
       </section>
@@ -91,7 +94,7 @@
       <section class="box">
         <picture>
           <p>
-            <i>Energy Produced</i>
+            <i class="bold">Energy Produced</i>
             <i>3000kWh</i>
           </p>
           <img width="100%" src="Graph.svg" alt="Energy Production Graph">`
