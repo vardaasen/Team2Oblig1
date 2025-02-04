@@ -114,8 +114,13 @@ main header {
     gap: 1rem;
 }
 
-.box-container-r2 {
+.box-container-left {
     flex: 1 1 44%;
+    
+    gap: 1rem;
+}
+.box-container-right {
+    flex: 1 1 20%;
     
     gap: 1rem;
 }
@@ -307,12 +312,31 @@ select{
     justify-content: space-between;
   }
 
+  .current-state{
+      display: flex;
+      flex-direction: row;
+  }
   .right{
     display: flex;
     flex-direction: column;
     align-items: end;
-    font-weight: bold;
     }
+    .month-summary .right{
+        font-weight: bold;
+    } 
+  .left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    }
+
+.slide-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 
 @media print {
     nav, main header {
