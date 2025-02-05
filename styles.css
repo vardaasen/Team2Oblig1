@@ -353,7 +353,7 @@ select{
 }
 
 .panel-line{
-    background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 17%, rgba(253,29,29,1) 53%, rgba(74,58,180,0) 55%);
+    background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 17%, rgba(253,29,29,1) 53%, rgb(235, 235, 235) 55%);
     height: 10px;
     border-radius: 10px;
     margin: 10px;
