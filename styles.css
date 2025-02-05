@@ -1,3 +1,4 @@
+/* Overall reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,7 @@
     color: inherit;
 }
 
+/* Layout for the entire page */
 body {
     display: flex;
     height: 100vh;
@@ -14,6 +16,7 @@ body {
     overflow: hidden;
 }
 
+/* Sidebar (unchanged) */
 .hamburger-menu {
     display: none;
     font-size: 18px;
@@ -39,27 +42,11 @@ nav {
     box-sizing: border-box;
 }
 
-.logo {
-    text-align: center;
-    padding: 15px 0;
-    margin-bottom: 20px;
-}
-
-h1.logo-text {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.highlight {
-    color: #FF914D;
-}
-
-.menu, .bottom-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
+/* Other nav styles ... */
+.logo { text-align: center; padding: 15px 0; margin-bottom: 20px; }
+h1.logo-text { font-size: 24px; font-weight: bold; }
+.highlight { color: #FF914D; }
+.menu, .bottom-menu { display: flex; flex-direction: column; gap: 5px; }
 .menu-item {
     color: white;
     padding: 12px;
@@ -69,21 +56,14 @@ h1.logo-text {
     gap: 12px;
     transition: all 0.3s ease;
 }
-
 .menu-item:hover, .menu-item.active {
     background-color: #FF914D;
     transform: translateX(5px);
 }
 
-picture img {
-    height: auto;
-    border-radius: 8px;
-}
-
-i {
-    font-style: normal;
-}
-
+/* Picture and icon styles */
+picture img { height: auto; border-radius: 8px; }
+i { font-style: normal; }
 .icon {
     font-size: 1.2em;
     display: inline-flex;
@@ -92,40 +72,55 @@ i {
     min-width: 24px;
 }
 
-main {
+/* -------------------------------
+   MAIN CONTENT & RESPONSIVE LAYOUT
+   ------------------------------- */
+
+/* Article is the flex container for your boxes */
+article {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
     overflow-y: auto;
-    height: 100vh;
+    /* Using min-height so content can grow if needed */
+    min-height: 100vh;
     box-sizing: border-box;
 }
-main header {
-    flex: 3 100%;
+
+/* Make the header (direct child of article) take full width */
+article > header {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
 }
+
+/* Each box-container is a flex item within the article */
 .box-container {
+    /* Start with a basis of 25% */
     flex: 1 1 25%;
-    
-    gap: 1rem;
-}
-.box-container-mid {
-    flex: 1 1 10%;
-    
+    /* Optionally, if you want the inner boxes to align in a column: */
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
 
-.box-container-left {
-    flex: 1 1 44%;
-    
-    gap: 1rem;
+/* Responsive adjustments for the box containers */
+@media (max-width: 800px) {
+    .box-container {
+        flex: 1 1 50%;
+    }
 }
-.box-container-right {
-    flex: 1 1 20%;
-    
-    gap: 1rem;
+@media (max-width: 500px) {
+    .box-container {
+        flex: 1 1 100%;
+    }
 }
 
-.box {
+/* -------------------------------
+   ATTRIBUTE-BASED BOX STYLING
+   ------------------------------- */
+
+/* General style for any element with a style-box attribute */
+[style-box] {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 20px;
@@ -133,7 +128,42 @@ main header {
     margin: 5px;
 }
 
+/* Specific layouts that use grid */
+[style-box="grid-layout"] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
 
+/* For all grid-layout variants, make text responsive */
+[style-box^="grid-layout"] {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    overflow-wrap: break-word;
+}
+
+/* Make the top row span both grid columns */
+[style-box="grid-layout-top"] {
+    grid-column: 1 / -1;
+}
+
+/* Place left and right items in the appropriate grid columns */
+[style-box="grid-layout-middle-left"] {
+    grid-column: 1;
+}
+[style-box="grid-layout-middle-right"] {
+    grid-column: 2;
+}
+
+/* Make the bottom row span both grid columns */
+[style-box="grid-layout-bottom"] {
+    grid-column: 1 / -1;
+}
+
+/* -------------------------------
+   OTHER STYLES (months, status, etc.)
+   ------------------------------- */
+
+/* Example: styling for the month section */
 .month {
     display: flex;
     gap: 10px;
@@ -141,7 +171,6 @@ main header {
     width: 100%;
     margin-left: 10px;
 }
-
 .month article {
     width: max-content;
     height: 120px;
@@ -155,7 +184,6 @@ main header {
     padding: 5px;
     text-align: center;
 }
-
 .month section {
     width: 120px;
     height: 140px;
@@ -168,51 +196,50 @@ main header {
     padding: 5px;
     text-align: center;
 }
+.month section:hover { transform: translateY(-5px); }
+.month section i { font-size: 2em; margin-bottom: 5px; }
+.month h2 { font-size: 18px; color: #333; margin: 0 0 5px; }
+.month i { font-size: 16px; color: #FF914D; font-weight: bold; margin-bottom: 10px; }
 
-.month section:hover {
-    transform: translateY(-5px);
-}
-
-.month section i {
-    font-size: 2em;
-    margin-bottom: 5px;
-}
-
-.month h2 {
-    font-size: 18px;
-    color: #333;
-    margin: 0;
-    margin-bottom: 5px;
-}
-
-.month i {
-    font-size: 16px;
-    color: #FF914D;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: 10px;
-}
-
-select{
+select {
     height: min-content;
     width: min-content;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
-#date-range {
-    margin: 10px;
-}
+#date-range { margin: 10px; }
 
-.address-img > img{
+.address-img > img {
     max-width: 14vw;
     aspect-ratio: 16/9;
 }
 
-.bold{
-    font-weight: bold;
+.bold { font-weight: bold; }
+
+.consumption-line {
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 21%, rgba(48,255,0,1) 35%, rgba(47,255,0,1) 61%, rgba(0,255,244,1) 69%, 
+    rgba(0,255,244,1) 82%, rgba(0,39,255,1) 88%, rgba(0,39,255,1) 100%);
+    height: 10px;
+    border-radius: 10px;
+    margin: 10px;
 }
 
+.current-line {
+    background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 46%, rgba(74,58,180,1) 67%);
+    height: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.panel-line {
+    background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 17%, rgba(253,29,29,1) 53%, rgb(235, 235, 235) 55%);
+    height: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* Status Overview Container */
 .status-overview {
     display: flex;
     flex-wrap: wrap;
@@ -223,9 +250,10 @@ select{
     border-radius: 12px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     height: 31vh;
-  }
+}
 
-  .status-group {
+/* Status Group (top row in your grid layout) */
+.status-group {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -235,37 +263,45 @@ select{
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     text-align: center;
-  }
+}
 
-  .status-group article {
+/* (Optional) If you need styling for articles within the status group */
+.status-group article {
     flex: 1;
     text-align: center;
-  }
+}
 
-  .status-group header {
+/* For headers within the status group */
+.status-group header {
     font-weight: bold;
-  }
+}
 
-  .status-group .value {
-    font-size: 1.2em;
+/* Value text inside the status group */
+.status-group .value {
+    font-size: inherit;
     font-weight: bold;
     margin-top: 5px;
-  }
+}
 
-  .status-card {
+/* General status card styling */
+.status-card {
     text-align: center;
     padding: 15px;
     background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     min-width: 150px;
-  }
-  g{
+}
+
+/* (A generic container for inline elements if needed) */
+g {
     display: flex;
     flex-direction: row;
     gap: 10px;
-  }
-  .status-card-bottom {
+}
+
+/* Special styling for the bottom status card */
+.status-card-bottom {
     flex: 1 1 40%;
     text-align: center;
     padding: 15px;
@@ -274,106 +310,78 @@ select{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     min-width: 150px;
     font-weight: bold;
-  }
+}
 
-  .status-card header {
+/* Header inside a status card */
+.status-card header {
     font-weight: bold;
-  }
+}
 
-  .status-card .value {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-top: 5px;
-  }
-  .status-card-bottom .value {
-    font-size: 1.2em;
+/* Value text within a status card */
+.status-card .value {
+    font-size: inherit;
     font-weight: bold;
     margin-top: 5px;
-  }
+}
 
-  .status-card-bottom .percentage {
+/* Value text within the bottom status card */
+.status-card-bottom .value {
+    font-size: inherit;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Percentage styling in the bottom status card */
+.status-card-bottom .percentage {
     color: green;
-    font-size: 0.9em;
+    font-size: inherit;
     margin-left: 5px;
-  }
+}
 
-  .active {
+/* Active status indicator */
+.active {
     color: green;
-  }
+}
 
-  .filter{
+/* Wrapper containers for the new layout */
+.row {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 1rem;
   }
-
-  .month-summary {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  
+  /* Row 2: Three equal columns */
+  .row.row-2 > .col {
+    flex: 1 1 33.33%;
+    padding: 0.5rem;
   }
-
-  .current-state{
-      display: flex;
-      flex-direction: row;
+  
+  /* Row 3: Two equal columns */
+  .row.row-3 > .col {
+    flex: 1 1 50%;
+    padding: 0.5rem;
   }
-  .right{
-    display: flex;
-    flex-direction: column;
-    align-items: end;
+  
+  /* Nested rows inside a column (for the right column in Row 3) */
+  .row.row-3 .col .nested-row {
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive adjustments: on very narrow screens stack columns */
+  @media (max-width: 600px) {
+    .row.row-2 > .col,
+    .row.row-3 > .col {
+      flex: 1 1 100%;
     }
-    .month-summary .right{
-        font-weight: bold;
-    } 
-  .left{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    }
-
-.slide-dots{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.consumption-line{
-    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 21%, rgba(48,255,0,1) 35%, rgba(47,255,0,1) 61%, rgba(0,255,244,1) 69%, 
-    rgba(0,255,244,1) 82%, rgba(0,39,255,1) 88%, rgba(0,39,255,1) 100%);
-    height: 10px;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-.current-line{
-    background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 46%, rgba(74,58,180,1) 67%);
-    height: 10px;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-.panel-line{
-    background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 17%, rgba(253,29,29,1) 53%, rgb(235, 235, 235) 55%);
-    height: 10px;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-
-@media print {
-    nav, main header {
-        display: none;
-    }
-}
-
+  }
+/* -------------------------------
+   MEDIA QUERIES (for smaller screens)
+   ------------------------------- */
 @media (max-width: 600px) {
-    body {
-        flex-direction: column;
-    }
+    body { flex-direction: column; }
 
-    .hamburger-menu {
-        display: block;
-    }
+    .hamburger-menu { display: block; }
 
     nav {
         position: fixed;
@@ -388,21 +396,14 @@ select{
         padding-top: 50px;
     }
     
-    nav.active {
-        left: 0;
-    }
-
+    nav.active { left: 0; }
+    
     main {
         width: 100%;
         box-sizing: border-box;
         padding-top: 50px;
     }
 
-    section {
-        flex-direction: column;
-    }
+    /* If needed, force sections to stack vertically */
+    section { flex-direction: column; }
 }
-
-@media screen and (min-width: 800px) {  
-}
-

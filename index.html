@@ -34,147 +34,168 @@
       </footer>
     </nav>
 
-    <main>
-      <header>
-        <h1>Overview</h1>
-      </header>
-      <section class="box-container">
-        <section class="box">
-          <p>
-            <i class="bold">450 FASHION AVE, NY, USA</i>
-            <select></select>
-          </p>
-          <picture class="address-img">
-              <img width="100%" src="assets/solar-panel-single-large-roof.jpg" />
-              <img width="100%" src="assets/solar-panel-large-and-small-roof.jpg" />
-          </picture>
-          <i class="slide-dots">●○○○</i>
-          <p>
-            <p>Total Panel</p>
-            <p><b>16</b> units</p>
-            <div class="panel-line"></div>
-          </p>
-        </section>
-      </section>
-      <section class="box-container-mid">
-        <main class="status-overview">
-          <section class="status-group">
-            <article>
-              <header>Status</header>
-              <p class="value active">Active</p>
-            </article>
-            <article>
-              <header>Capacity</header>
-              <p class="value">320 kWh</p>
-            </article>
-            <article>
-              <header>Total Yield</header>
-              <p class="value">190 kWh</p>
-            </article>
-          </section>
-          <g>
-            <article class="status-card">
-              <header>Consumption</header>
-              <p class="value">250 kWh</p>
-            </article>
-  
-            <article class="status-card">
-              <header>Total Charging</header>
-              <p class="value">100.90 kWh</p>
-            </article>
-          </g>
-
-          <article class="status-card-bottom">
-            <header>Real Time Power Usage</header>
-            <p class="value">
-              100.90 kWh <span class="percentage">-20%</span>
-            </p>
-          </article>
-        </main>
-      </section>
-      
-      
-
-      <section class="box-container">
-        <section class="filter">
-          <select name="date-range" id="date-range">
-            <option>01.06.2023 - 30.09.2023</option>
-          </select>
-          <img src="assets/filter-f.svg" alt="Filter Icon" width="24" height="20" />
-        </section>
-        <section class="month">
-          <article>
-            <h2>Jun</h2>
-            <i class="icon">☀️</i>
-            <p>280 kwh</p>
-          </article>
-          <article>
-            <h2>Jul</h2>
-            <i class="icon">☀️</i>
-            <p>301 kwh</p>
-          </article>
-          <article>
-            <h2>Aug</h2>
-            <i class="icon">⛅</i>
-            <p>189 kwh</p>
-          </article>
-          <article>
-            <h2>Sept</h2>
-            <i class="icon">🌤️</i>
-            <p>243 kwh</p>
-          </article>
-        </section>
-        <section class="box month-summary">
-          <section class="left">
-            <p>Min/Max Used</p>
-            <p>Total Used</p>    
-          </section>
-          <section class="right">
-            <p>August 189 kWh / July 301 kWh</p>
-            <p>318 kWh</p>
-          </section>
-        </section>
-      </section>
-      <section class="box-container-left">
-      <section class="box">
-        <picture>
-          <p>
-            <i class="bold">Energy Produced</i>
-            <i>3000kWh</i>
-          </p>
-          <img width="100%" src="Graph.svg" alt="Energy Production Graph">`
-        </picture>
-      </section>
-    </section>
-
-    <section class="box-container-right">
-      <section class="box">
-          <h1>Current State</h1>
-          <div class="current-line"></div>
-          <section class="left current-state">
-            <b>7.5 kWh</b>
-            <p>Exported Energy - 58%</p>    
-          </section>
-          <section class="right">
-            <b>6.5 kWh</b>
-            <p>Selfuse Energy - 42%</p>
-          </section>
-      </section>
-      <br>
-      <section class="box">
-          <h1>Home Energy Consumption</h1>
-          <div class="consumption-line"></div>
-          <p>Maximal Used - 38%</p>
-          <p>Meter Energy - 27%</p>
-          <p>Utility Meter Uptime - 23%</p>
-          <p>UPS Input Voltage - 15%</p>
-          <p>Standard Tariff</p>
-          <p>Meter Energy</p>
-        </section>
-    </section>
-
-      
-    </main>
+      <main>
+        <article class="overview-boxes-view">
+          <!-- Row 1: Header -->
+          <header>
+            <h1>Overview</h1>
+          </header>
+    
+          <!-- Row 2: Three columns -->
+          <div class="row row-2">
+            <!-- Column 1: Image / Address & Panel Info -->
+            <div class="col col-1">
+              <div style-box="">
+                <header>
+                  <i class="bold">450 FASHION AVE, NY, USA</i>
+                  <select>
+                    <!-- Options here -->
+                  </select>
+                </header>
+                <picture class="address-img">
+                  <img src="assets/solar-panel-single-large-roof.jpg" alt="Solar Panel on Single Large Roof" width="100%" />
+                  <img src="assets/solar-panel-large-and-small-roof.jpg" alt="Solar Panels on Large and Small Roof" width="100%" />
+                  <figcaption>
+                    <i class="slide-dots">●○○○</i>
+                  </figcaption>
+                </picture>
+                <div>
+                  <p>Total Panel</p>
+                  <p><b>16</b> units</p>
+                  <div class="panel-line"></div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Column 2: Status Overview -->
+            <div class="col col-2">
+              <div style-box="grid-layout" class="status-overview">
+                <div style-box="grid-layout-top" class="status-group">
+                  <div>
+                    <h1>Status</h1>
+                    <p class="value active">Active</p>
+                  </div>
+                  <div>
+                    <h1>Capacity</h1>
+                    <p class="value">320 kWh</p>
+                  </div>
+                  <div>
+                    <h1>Total Yield</h1>
+                    <p class="value">190 kWh</p>
+                  </div>
+                </div>
+    
+                <div style-box="grid-layout-middle-left" class="status-card">
+                  <h1>Consumption</h1>
+                  <p class="value">250 kWh</p>
+                </div>
+    
+                <div style-box="grid-layout-middle-right" class="status-card">
+                  <h1>Total Charging</h1>
+                  <p class="value">100.90 kWh</p>
+                </div>
+    
+                <div style-box="grid-layout-bottom" class="status-card-bottom">
+                  <h1>Real Time Power Usage</h1>
+                  <p class="value">
+                    100.90 kWh <span class="percentage">-20%</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Column 3: Filter & Monthly Summary -->
+            <div class="col col-3">
+              <div style-box="">
+                <div class="filter">
+                  <select name="date-range" id="date-range">
+                    <option>01.06.2023 - 30.09.2023</option>
+                  </select>
+                  <img src="assets/filter-f.svg" alt="Filter Icon" width="24" height="20" />
+                </div>
+                <div class="month">
+                  <div>
+                    <h2>Jun</h2>
+                    <i class="icon">☀️</i>
+                    <p>280 kwh</p>
+                  </div>
+                  <div>
+                    <h2>Jul</h2>
+                    <i class="icon">☀️</i>
+                    <p>301 kwh</p>
+                  </div>
+                  <div>
+                    <h2>Aug</h2>
+                    <i class="icon">⛅</i>
+                    <p>189 kwh</p>
+                  </div>
+                  <div>
+                    <h2>Sept</h2>
+                    <i class="icon">🌤️</i>
+                    <p>243 kwh</p>
+                  </div>
+                </div>
+                <div class="box month-summary">
+                  <div class="left">
+                    <p>Min/Max Used</p>
+                    <p>Total Used</p>
+                  </div>
+                  <div class="right">
+                    <p>August 189 kWh / July 301 kWh</p>
+                    <p>318 kWh</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.row-2 -->
+    
+          <!-- Row 3: Two columns -->
+          <div class="row row-3">
+            <!-- Column 1: SVG Graph / Energy Produced -->
+            <div class="col col-1">
+              <div style-box="layout-left">
+                <picture>
+                  <figcaption>
+                    <i class="bold">Energy Produced</i>
+                    <i>3000kWh</i>
+                  </figcaption>
+                  <img src="Graph.svg" alt="Energy Production Graph" width="100%" />
+                </picture>
+              </div>
+            </div>
+    
+            <!-- Column 2: Nested rows for Current State & Home Energy Consumption -->
+            <div class="col col-2">
+              <div class="nested-row nested-top">
+                <div style-box="layout-right">
+                  <h1>Current State</h1>
+                  <div class="current-line"></div>
+                  <section class="left current-state">
+                    <b>7.5 kWh</b>
+                    <p>Exported Energy - 58%</p>
+                  </section>
+                  <section class="right">
+                    <b>6.5 kWh</b>
+                    <p>Selfuse Energy - 42%</p>
+                  </section>
+                </div>
+              </div>
+              <div class="nested-row nested-bottom">
+                <div style-box="">
+                  <h1>Home Energy Consumption</h1>
+                  <div class="consumption-line"></div>
+                  <p>Maximal Used - 38%</p>
+                  <p>Meter Energy - 27%</p>
+                  <p>Utility Meter Uptime - 23%</p>
+                  <p>UPS Input Voltage - 15%</p>
+                  <p>Standard Tariff</p>
+                  <p>Meter Energy</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.row-3 -->
+        </article>
+      </main>
 
     <script>
       document
