@@ -52,7 +52,7 @@
           <p>
             <p>Total Panel</p>
             <p><b>16</b> units</p>
-            <div class="panel-line"></div>
+            <div class="panel-line lines"></div>
           </p>
         </section>
       </section>
@@ -147,31 +147,52 @@
       </section>
     </section>
 
-    <section class="box-container-right">
-      <section class="box">
-          <h1>Current State</h1>
-          <div class="current-line"></div>
-          <section class="left current-state">
-            <b>7.5 kWh</b>
-            <p>Exported Energy - 58%</p>    
-          </section>
-          <section class="right">
-            <b>6.5 kWh</b>
-            <p>Selfuse Energy - 42%</p>
-          </section>
-      </section>
-      <br>
-      <section class="box">
-          <h1>Home Energy Consumption</h1>
-          <div class="consumption-line"></div>
-          <p>Maximal Used - 38%</p>
-          <p>Meter Energy - 27%</p>
-          <p>Utility Meter Uptime - 23%</p>
-          <p>UPS Input Voltage - 15%</p>
-          <p>Standard Tariff</p>
-          <p>Meter Energy</p>
+    <section class="box-container-left energy-dashboard">
+        <section class="energy-card">
+            <header class="energy-header">
+                <h2>Current State</h2>
+                <a href="#" class="info-link">More Info</a>
+            </header>
+            <div class="current-line lines"></div>
+            <article class="energy-row">
+                <div class="energy-column">
+                    <p class="bold">7.5 kWh</p>
+                    <p><span class="bar red"></span> Exported Energy - 58%</p>
+                </div>
+                <div class="energy-column right-align">
+                    <p class="bold">6.5 kWh</p>
+                    <p><span class="bar blue"></span> Self-use Energy - 42%</p>
+                </div>
+            </article>
         </section>
-    </section>
+
+        <section class="energy-card">
+            <header class="energy-header">
+                <h2>Home Energy Consumption</h2>
+                <a href="#" class="info-link">More Info</a>
+            </header>
+            <div class="consumption-line lines"></div>
+            <article class="energy-list">
+                <div class="energy-item">
+                    <span class="bar red"></span> <span class="label">Maximal Used - 38%</span> <span class="value">0.8 kW</span>
+                </div>
+                <div class="energy-item">
+                    <span class="bar green"></span> <span class="label">Meter Energy - 27%</span> <span class="value">2.358 kWh</span>
+                </div>
+                <div class="energy-item">
+                    <span class="bar cyan"></span> <span class="label">Utility Meter Uptime - 23%</span> <span class="value">75d 4h 25m</span>
+                </div>
+                <div class="energy-item">
+                    <span class="bar blue"></span> <span class="label">UPS Input Voltage - 15%</span> <span class="value">260.5 V</span>
+                </div>
+                <div class="energy-item">
+                    <span class="label">Standard Tariff</span> <span class="value">13.5 p/kWh</span>
+                </div>
+                <div class="energy-item">
+                    <span class="label">Meter Energy</span> <span class="value">$2.55</span>
+                </div>
+            </article>
+        </section>
 
       
     </main>
