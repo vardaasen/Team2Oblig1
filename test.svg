@@ -128,10 +128,19 @@ Row 3 of Main Column:
   <rect x="740" y="376.66" width="200" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
   <text x="750" y="406.66" font-size="10">Min Max Total Use (c3-ig-r3-b)</text>
   
-  <!-- ROW 3 of Main Column -->
-  <!-- Graph Box (c-2-r-3-c-1) -->
-  <rect x="220" y="490" width="500" height="440" fill="lavender" stroke="black" filter="url(#dropshadow)"/>
-  <text x="230" y="520" font-size="12">Graph Box (c-2-r-3-c-1-b)</text>
+   <!-- ROW 3 of Main Column -->
+  <!-- Graph Box (c-2-r-3-c-1) with linked external SVG -->
+  <a href="graph.svg" target="_blank">
+    <!-- Optional background: a rectangle drawn with the same dimensions -->
+    <rect x="220" y="490" width="500" height="440" fill="lavender" stroke="black" filter="url(#dropshadow)"/>
+    <!-- The external SVG is referenced here -->
+    <image href="graph.svg"
+           x="220" y="490"
+           width="500" height="440"
+           preserveAspectRatio="xMidYMid meet" />
+    <!-- Optional label text -->
+    <text x="230" y="520" font-size="12">Graph Box (c-2-r-3-c-1-b)</text>
+  </a>
   
   <!-- Right Column of Row 3 -->
   <rect x="740" y="490" width="200" height="180" fill="mistyrose" stroke="black" filter="url(#dropshadow)"/>
