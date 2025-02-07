@@ -2,54 +2,69 @@
 
 ```mermaid
 flowchart TD
-  %% Outer container mimicking the overall page grid
-  subgraph Container["Container\n(Grid: 16% Nav | 84% Main)"]
-  
-    nav[Nav Area<br/>(Background: #343a40, White Text)]
-    
-    subgraph Main["Main Content Area\n(Grid Rows: Header, Middle, Bottom)"]
-      header[Header (Box 1)]
+  subgraph Body
+    nav["Nav Column\n(16vw)"]:::navStyle
+    subgraph MainCol["Main Column\n(Article Container)"]:::mainColStyle
+      header["Header Row\n(16vh)"]:::headerStyle
       
-      %% Middle section (Row 2)
-      subgraph Middle["Middle Section (Row 2)"]
-      
-        col1[Image Container<br/>(Box 2)]
+      subgraph Row2["Row 2"]:::row2Style
+        left["Left Container Box w/Image\n(34vw, 32vh)"]:::leftStyle
         
-        %% Inner grid for Column 2 of Middle Section
-        subgraph InnerGrid["Inner Grid\n(Column 2)"]
-          status[Status (Box 3)]
-          subgraph TwoBoxes["Two Boxes\n(Row 2)"]
-            consumption[Consumption (Box 4)]
-            total[Total Charging (Box 5)]
+        subgraph MiddleBox["Middle Container Box\n(Inner Grid)"]:::middleBoxStyle
+          status["Status Box\n(20vw, 10vh)"]:::statusStyle
+          subgraph MidRow2["Row 2"]:::midRow2Style
+            consumption["Consumption Box\n(9vw, 10vh)"]:::consumptionStyle
+            total["Total Charging Box\n(11vw, 10vh)"]:::totalStyle
           end
-          power[Real Time Power Usage (Box 6)]
+          realtime["Real Time Power Usage Box\n(20vw, 10vh)"]:::realtimeStyle
         end
         
-        %% Right group for Column 3 of Middle Section
-        subgraph RightGroup["Right Group\n(Column 3)"]
-          range[Range Selector & Filter (Box 7)]
-          subgraph IconGrid["Icon Grid\n(4 Icons)"]
-            icon1[Icon 1 (Box 8)]
-            icon2[Icon 2 (Box 9)]
-            icon3[Icon 3 (Box 10)]
-            icon4[Icon 4 (Box 11)]
+        subgraph RightBox["Right Container Box\n(Inner Grid)"]:::rightBoxStyle
+          range["Range Selector & Filter Icon\n(30vw, 5vh)"]:::rangeStyle
+          subgraph MonthIcons["Month Icons Row"]:::monthIconsStyle
+            icon1["Icon 1\n(7.5vw, 15vh)"]:::iconStyle
+            icon2["Icon 2\n(7.5vw, 15vh)"]:::iconStyle
+            icon3["Icon 3\n(7.5vw, 15vh)"]:::iconStyle
+            icon4["Icon 4\n(7.5vw, 15vh)"]:::iconStyle
           end
-          summary[Min/Max Total Use (Box 12)]
+          minmax["Min Max Total Use Box\n(30vw, 10vh)"]:::minmaxStyle
         end
-        
       end
       
-      %% Bottom section (Row 3)
-      subgraph Bottom["Bottom Section (Row 3)"]
-        graph[Graph SVG (Box 13)]
-        subgraph RightStack["Right Stack\n(Two Stacked Boxes)"]
-          current[Current State (Box 14)]
-          energy[Energy Consumption (Box 15)]
+      subgraph Row3["Row 3"]:::row3Style
+        graphSVG["Left Box w/Graph SVG\n(54vw, 52vh)"]:::graphSVGStyle
+        subgraph RightCol["Right Column\n(Two Rows)"]:::rightColStyle
+          current["Current State Container Box\n(30vw, 20vh)"]:::currentStyle
+          energy["Energy Consumption Container Box\n(30vw, 32vh)"]:::energyStyle
         end
       end
     end
   end
+
+%% Class definitions (the "hack")
+classDef navStyle fill:#f4f4f4,stroke:#333,stroke-width:1px, padding:10px;
+classDef mainColStyle fill:#e8e8e8,stroke:#333,stroke-width:1px, padding:10px;
+classDef headerStyle fill:#cce5ff,stroke:#333,stroke-width:1px, padding:10px;
+classDef row2Style fill:#f9f9f9,stroke:#333,stroke-width:1px, padding:10px;
+classDef leftStyle fill:#dff0d8,stroke:#333,stroke-width:1px, padding:10px;
+classDef middleBoxStyle fill:#fcf8e3,stroke:#333,stroke-width:1px, padding:10px;
+classDef statusStyle fill:#d9edf7,stroke:#333,stroke-width:1px, padding:10px;
+classDef midRow2Style fill:#eeeeee,stroke:#333,stroke-width:1px, padding:10px;
+classDef consumptionStyle fill:#f2dede,stroke:#333,stroke-width:1px, padding:10px;
+classDef totalStyle fill:#f2dede,stroke:#333,stroke-width:1px, padding:10px;
+classDef realtimeStyle fill:#d9edf7,stroke:#333,stroke-width:1px, padding:10px;
+classDef rightBoxStyle fill:#fcf8e3,stroke:#333,stroke-width:1px, padding:10px;
+classDef rangeStyle fill:#dff0d8,stroke:#333,stroke-width:1px, padding:10px;
+classDef monthIconsStyle fill:#f9f9f9,stroke:#333,stroke-width:1px, padding:10px;
+classDef iconStyle fill:#eeeeee,stroke:#333,stroke-width:1px, padding:10px;
+classDef minmaxStyle fill:#d9edf7,stroke:#333,stroke-width:1px, padding:10px;
+classDef row3Style fill:#f9f9f9,stroke:#333,stroke-width:1px, padding:10px;
+classDef graphSVGStyle fill:#dff0d8,stroke:#333,stroke-width:1px, padding:10px;
+classDef rightColStyle fill:#fcf8e3,stroke:#333,stroke-width:1px, padding:10px;
+classDef currentStyle fill:#d9edf7,stroke:#333,stroke-width:1px, padding:10px;
+classDef energyStyle fill:#d9edf7,stroke:#333,stroke-width:1px, padding:10px;
 ```
+
 ***
 
 ```plaintext
