@@ -114,16 +114,16 @@ Row 3 of Main Column:
   
   <!-- Row 2: Icon Row (4 boxes) -->
   <rect x="740" y="273.33" width="42.5" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
-  <text x="745" y="303.33" font-size="10">Icon 1 (c3-ig-r2-c1-b)</text>
+  <text x="745" y="303.33" font-size="10">Icon 1 (c3-ig-r2-c1-b) ☀️</text>
   
   <rect x="792.5" y="273.33" width="42.5" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
-  <text x="797.5" y="303.33" font-size="10">Icon 2 (c3-ig-r2-c2-b)</text>
+  <text x="797.5" y="303.33" font-size="10">Icon 2 (c3-ig-r2-c2-b) ☀️</text>
   
   <rect x="845" y="273.33" width="42.5" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
-  <text x="850" y="303.33" font-size="10">Icon 3 (c3-ig-r2-c3-b)</text>
+  <text x="850" y="303.33" font-size="10">Icon 3 (c3-ig-r2-c3-b) ⛅</text>
   
   <rect x="897.5" y="273.33" width="42.5" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
-  <text x="902.5" y="303.33" font-size="10">Icon 4 (c3-ig-r2-c4-b)</text>
+  <text x="902.5" y="303.33" font-size="10">Icon 4 (c3-ig-r2-c4-b) 🌤️</text>
   
   <!-- Row 3: Min Max Total Use -->
   <rect x="740" y="376.66" width="200" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
@@ -131,6 +131,7 @@ Row 3 of Main Column:
   
    <!-- ROW 3 of Main Column -->
    <!-- GRAPH_BOX_START -->
+<svg x="220" y="490" width="500" height="440" viewBox="0 0 670 360">
 <line x1="65" y1="10" x2="665" y2="10" style="stroke: grey" />
             <line x1="65" y1="60" x2="665" y2="60" style="stroke: grey" />
             <line x1="65" y1="110" x2="665" y2="110" style="stroke: grey" />
@@ -203,6 +204,7 @@ Row 3 of Main Column:
               <text x="15" y="265">50</text>
               <text x="15" y="315">0</text>
             </g>
+</svg>
 <!-- GRAPH_BOX_END -->
   
   <!-- Right Column of Row 3 -->
