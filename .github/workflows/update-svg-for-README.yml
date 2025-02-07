@@ -5,6 +5,7 @@ on:
     paths:
       - 'test.svg'
       - 'Graph.svg'
+  workflow_dispatch:
 
 jobs:
   update-svg:
@@ -18,13 +19,9 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install dependencies (if any)
-        run: npm install
-
       - name: Run SVG update script
         run: node .github/workflows/update-svg.js
 
-      # Optionally commit and push the updated generated.svg back to the repo
       - name: Commit updated SVG if changed
         run: |
           git config --local user.email "action@github.com"
