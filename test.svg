@@ -72,10 +72,22 @@ Row 3 of Main Column:
   </defs>
   
   <!-- Outline the whole body -->
-  <rect x="0" y="0" width="1000" height="1000" fill="none" stroke="black"/>
+  <rect 
+    x="0" 
+    y="0" 
+    width="1000" 
+    height="1000" 
+    fill="none" 
+    stroke="black"/>
   
   <!-- NAV COLUMN -->
-  <rect x="0" y="0" width="160" height="1000" fill="lightgray" stroke="none"/>
+  <rect 
+    x="0" 
+    y="0" 
+    width="160" 
+    height="1000" 
+    fill="lightgray" 
+    stroke="none"/>
   <text x="10" y="30" font-size="12">Nav Column</text>
   
   <!-- MAIN COLUMN CONTAINER -->
