@@ -2,40 +2,49 @@
 
 ```mermaid
 flowchart TD
-  subgraph Body
-    nav["Nav Column\n(16vw)"]
-    subgraph MainCol["Main Column\n(Article Container)"]
-      header["Header Row\n(16vh)"]
+  %% Outer container mimicking the overall page grid
+  subgraph Container["Container\n(Grid: 16% Nav | 84% Main)"]
+  
+    nav[Nav Area<br/>(Background: #343a40, White Text)]
+    
+    subgraph Main["Main Content Area\n(Grid Rows: Header, Middle, Bottom)"]
+      header[Header (Box 1)]
       
-      subgraph Row2["Row 2"]
-        left["Left Container Box w/Image\n(34vw, 32vh)"]
+      %% Middle section (Row 2)
+      subgraph Middle["Middle Section (Row 2)"]
+      
+        col1[Image Container<br/>(Box 2)]
         
-        subgraph MiddleBox["Middle Container Box\n(Inner Grid)"]
-          status["Status Box\n(20vw, 10vh)"]
-          subgraph MidRow2["Row 2"]
-            consumption["Consumption Box\n(9vw, 10vh)"]
-            total["Total Charging Box\n(11vw, 10vh)"]
+        %% Inner grid for Column 2 of Middle Section
+        subgraph InnerGrid["Inner Grid\n(Column 2)"]
+          status[Status (Box 3)]
+          subgraph TwoBoxes["Two Boxes\n(Row 2)"]
+            consumption[Consumption (Box 4)]
+            total[Total Charging (Box 5)]
           end
-          realtime["Real Time Power Usage Box\n(20vw, 10vh)"]
+          power[Real Time Power Usage (Box 6)]
         end
         
-        subgraph RightBox["Right Container Box\n(Inner Grid)"]
-          range["Range Selector & Filter Icon\n(30vw, 5vh)"]
-          subgraph MonthIcons["Month Icons Row"]
-            icon1["Icon 1\n(7.5vw, 15vh)"]
-            icon2["Icon 2\n(7.5vw, 15vh)"]
-            icon3["Icon 3\n(7.5vw, 15vh)"]
-            icon4["Icon 4\n(7.5vw, 15vh)"]
+        %% Right group for Column 3 of Middle Section
+        subgraph RightGroup["Right Group\n(Column 3)"]
+          range[Range Selector & Filter (Box 7)]
+          subgraph IconGrid["Icon Grid\n(4 Icons)"]
+            icon1[Icon 1 (Box 8)]
+            icon2[Icon 2 (Box 9)]
+            icon3[Icon 3 (Box 10)]
+            icon4[Icon 4 (Box 11)]
           end
-          minmax["Min Max Total Use Box\n(30vw, 10vh)"]
+          summary[Min/Max Total Use (Box 12)]
         end
+        
       end
       
-      subgraph Row3["Row 3"]
-        graphSVG["Left Box w/Graph SVG\n(54vw, 52vh)"]
-        subgraph RightCol["Right Column\n(Two Rows)"]
-          current["Current State Container Box\n(30vw, 20vh)"]
-          energy["Energy Consumption Container Box\n(30vw, 32vh)"]
+      %% Bottom section (Row 3)
+      subgraph Bottom["Bottom Section (Row 3)"]
+        graph[Graph SVG (Box 13)]
+        subgraph RightStack["Right Stack\n(Two Stacked Boxes)"]
+          current[Current State (Box 14)]
+          energy[Energy Consumption (Box 15)]
         end
       end
     end
