@@ -135,7 +135,7 @@ Row 3 of Main Column:
   
     <!-- Optional background: a rectangle drawn with the same dimensions -->
     <rect x="220" y="490" width="500" height="440" fill="lavender" stroke="black" filter="url(#dropshadow)"/>
-    <!-- The external SVG is referenced here -->
+    <!-- The external SVG is referenced here and does not work on github because they sanitize -->
     <image 
       crossorigin="anonymous"
       xlink:href="https://raw.githubusercontent.com/vardaasen/Team2Oblig1/main/Graph.svg"
