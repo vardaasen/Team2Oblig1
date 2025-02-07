@@ -1,41 +1,40 @@
 # Team2Oblig1
 
-```mermaid
 flowchart TD
   subgraph Body
-    nav["Nav Column\n(16vw)"]:::navStyle
-    subgraph MainCol["Main Column\n(Article Container)"]:::mainColStyle
-      header["Header Row\n(16vh)"]:::headerStyle
+    nav["Nav Column\n(16vw)"]
+    subgraph MainCol["Main Column\n(Article Container)"]
+      header["Header Row\n(16vh)"]
       
-      subgraph Row2["Row 2"]:::row2Style
-        left["Left Container Box w/Image\n(34vw, 32vh)"]:::leftStyle
+      subgraph Row2["Row 2"]
+        left["Left Container Box w/Image\n(34vw, 32vh)"]
         
-        subgraph MiddleBox["Middle Container Box\n(Inner Grid)"]:::middleBoxStyle
-          status["Status Box\n(20vw, 10vh)"]:::statusStyle
-          subgraph MidRow2["Row 2"]:::midRow2Style
-            consumption["Consumption Box\n(9vw, 10vh)"]:::consumptionStyle
-            total["Total Charging Box\n(11vw, 10vh)"]:::totalStyle
+        subgraph MiddleBox["Middle Container Box\n(Inner Grid)"]
+          status["Status Box\n(20vw, 10vh)"]
+          subgraph MidRow2["Row 2"]
+            consumption["Consumption Box\n(9vw, 10vh)"]
+            total["Total Charging Box\n(11vw, 10vh)"]
           end
-          realtime["Real Time Power Usage Box\n(20vw, 10vh)"]:::realtimeStyle
+          realtime["Real Time Power Usage Box\n(20vw, 10vh)"]
         end
         
-        subgraph RightBox["Right Container Box\n(Inner Grid)"]:::rightBoxStyle
-          range["Range Selector & Filter Icon\n(30vw, 5vh)"]:::rangeStyle
-          subgraph MonthIcons["Month Icons Row"]:::monthIconsStyle
-            icon1["Icon 1\n(7.5vw, 15vh)"]:::iconStyle
-            icon2["Icon 2\n(7.5vw, 15vh)"]:::iconStyle
-            icon3["Icon 3\n(7.5vw, 15vh)"]:::iconStyle
-            icon4["Icon 4\n(7.5vw, 15vh)"]:::iconStyle
+        subgraph RightBox["Right Container Box\n(Inner Grid)"]
+          range["Range Selector & Filter Icon\n(30vw, 5vh)"]
+          subgraph MonthIcons["Month Icons Row"]
+            icon1["Icon 1\n(7.5vw, 15vh)"]
+            icon2["Icon 2\n(7.5vw, 15vh)"]
+            icon3["Icon 3\n(7.5vw, 15vh)"]
+            icon4["Icon 4\n(7.5vw, 15vh)"]
           end
-          minmax["Min Max Total Use Box\n(30vw, 10vh)"]:::minmaxStyle
+          minmax["Min Max Total Use Box\n(30vw, 10vh)"]
         end
       end
       
-      subgraph Row3["Row 3"]:::row3Style
-        graphSVG["Left Box w/Graph SVG\n(54vw, 52vh)"]:::graphSVGStyle
-        subgraph RightCol["Right Column\n(Two Rows)"]:::rightColStyle
-          current["Current State Container Box\n(30vw, 20vh)"]:::currentStyle
-          energy["Energy Consumption Container Box\n(30vw, 32vh)"]:::energyStyle
+      subgraph Row3["Row 3"]
+        graphSVG["Left Box w/Graph SVG\n(54vw, 52vh)"]
+        subgraph RightCol["Right Column\n(Two Rows)"]
+          current["Current State Container Box\n(30vw, 20vh)"]
+          energy["Energy Consumption Container Box\n(30vw, 32vh)"]
         end
       end
     end
@@ -63,7 +62,25 @@ classDef graphSVGStyle fill:#dff0d8,stroke:#333,stroke-width:1px, padding:10px;
 classDef rightColStyle fill:#fcf8e3,stroke:#333,stroke-width:1px, padding:10px;
 classDef currentStyle fill:#d9edf7,stroke:#333,stroke-width:1px, padding:10px;
 classDef energyStyle fill:#d9edf7,stroke:#333,stroke-width:1px, padding:10px;
-```
+
+%% Assign classes to nodes by id
+class nav navStyle;
+class MainCol mainColStyle;
+class header headerStyle;
+class left leftStyle;
+class status statusStyle;
+class consumption consumptionStyle;
+class total totalStyle;
+class realtime realtimeStyle;
+class range rangeStyle;
+class icon1 iconStyle;
+class icon2 iconStyle;
+class icon3 iconStyle;
+class icon4 iconStyle;
+class minmax minmaxStyle;
+class graphSVG graphSVGStyle;
+class current currentStyle;
+class energy energyStyle;
 
 ***
 
