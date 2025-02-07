@@ -9,67 +9,51 @@
   <!-- Outline the whole body -->
   <rect x="0" y="0" width="1000" height="1000" fill="none" stroke="black" />
   
-  <!-- Nav Column (left, 16vw ≈ 160px wide) -->
-  <rect x="0" y="0" width="160" height="1000" fill="lightgray" stroke="black" />
-  <text x="10" y="20" font-size="12">Nav Column</text>
+  <!-- NAV COLUMN (left, 16vw ≈ 160px wide) -->
+  <!-- (Vertical inset of 10px as before.) -->
+  <rect x="0" y="10" width="160" height="980" fill="lightgray" stroke="black" />
+  <text x="10" y="30" font-size="12">Nav Column</text>
   
-  <!-- Main Column Container (Main background, same as header) -->
-  <!-- Now filled with white so that the main background matches the header -->
-  <rect x="160" y="0" width="840" height="1000" fill="white" stroke="none"/>
+  <!-- MAIN COLUMN CONTAINER (background) -->
+  <!-- Now starting at x=160 so it fills flush to the nav -->
+  <rect x="160" y="10" width="840" height="980" fill="white" stroke="none"/>
   
-  <!-- Header Row (Row 1) -->
-  <!-- Original header area: x=160, y=0, width=840, height=160 -->
-  <!-- With a 10px gap on each side: x=170, y=10, width=820, height=140 -->
-  <!-- Header now has white fill (same as main) and no drop shadow -->
-  <rect x="170" y="10" width="820" height="140" fill="white" stroke="none"/>
+  <!-- HEADER ROW (Row 1) -->
+  <!-- Content now inset 30px from left (instead of 10px) -->
+  <rect x="190" y="20" width="800" height="140" fill="white" stroke="none"/>
   <!-- A thin bottom border line for the header -->
-  <line x1="170" y1="150" x2="990" y2="150" stroke="black" stroke-width="1"/>
-  <text x="180" y="40" font-size="12">Header Row (c-2-r-1)</text>
+  <line x1="190" y1="160" x2="990" y2="160" stroke="black" stroke-width="1"/>
+  <text x="200" y="50" font-size="12">Header Row (c-2-r-1)</text>
   
-  <!-- Row 2 - subdivided horizontally into three parts -->
+  <!-- ROW 2 – subdivided horizontally into three parts -->
+  
   <!-- Left Container (c-2-r-2-c-1-b) -->
-  <!-- Original area: x=160, y=160, width=340, height=320 -->
-  <!-- With gap: x=170, y=170, width=320, height=300 -->
-  <rect x="170" y="170" width="320" height="300" fill="powderblue" stroke="black" filter="url(#dropshadow)"/>
-  <text x="180" y="190" font-size="12">Left Container Box w/Image (c-2-r-2-c-1-b)</text>
+  <rect x="190" y="170" width="320" height="300" fill="powderblue" stroke="black" filter="url(#dropshadow)"/>
+  <text x="200" y="190" font-size="12">Left Container Box w/Image (c-2-r-2-c-1-b)</text>
   
   <!-- Middle Container (c-2-r-2-c-2) inner grid -->
-  <!-- Original container: x=500, y=160, width=200, height=320 -->
-  <!-- Effective container with gap: x=510, y=170, width=180, height=300 -->
-  <!-- Divide vertically into three rows with 10px gaps between rows -->
-  <!-- Each row height = (300 - 2*10) / 3 = 280/3 ≈ 93.33 px -->
+  <!-- Placed with a 10px gap from the left container (right edge of left container = 190+320 = 510) -->
+  <rect x="520" y="170" width="180" height="93.33" fill="white" stroke="blue" filter="url(#dropshadow)"/>
+  <text x="530" y="200" font-size="10">Status Box (c2-ig-r1-b)</text>
   
-  <!-- Row 1: Status Box -->
-  <rect x="510" y="170" width="180" height="93.33" fill="white" stroke="blue" filter="url(#dropshadow)"/>
-  <text x="520" y="200" font-size="10">Status Box (c2-ig-r1-b)</text>
-  
-  <!-- Row 2: Two side-by-side boxes -->
+  <!-- Middle Container, Row 2: Two side-by-side boxes -->
   <!-- Row 2 begins at y = 170 + 93.33 + 10 = 273.33 -->
-  <!-- Available width = 180, minus a 10px gap between them -->
-  <!-- Consumption box ≈77px wide, Total Charging box ≈93px wide -->
-  <rect x="510" y="273.33" width="77" height="93.33" fill="white" stroke="blue" filter="url(#dropshadow)"/>
-  <text x="515" y="303.33" font-size="10">Consumption (c2-ig-r2c1-b)</text>
-  <rect x="597" y="273.33" width="93" height="93.33" fill="white" stroke="blue" filter="url(#dropshadow)"/>
-  <text x="602" y="303.33" font-size="10">Total Charging (c2-ig-r2c2-b)</text>
+  <rect x="520" y="273.33" width="77" height="93.33" fill="white" stroke="blue" filter="url(#dropshadow)"/>
+  <text x="525" y="303.33" font-size="10">Consumption (c2-ig-r2c1-b)</text>
+  <rect x="607" y="273.33" width="93" height="93.33" fill="white" stroke="blue" filter="url(#dropshadow)"/>
+  <text x="612" y="303.33" font-size="10">Total Charging (c2-ig-r2c2-b)</text>
   
-  <!-- Row 3: Real Time Power Usage Box -->
-  <!-- This row begins at y = 273.33 + 93.33 + 10 = 376.66 -->
-  <rect x="510" y="376.66" width="180" height="93.33" fill="white" stroke="blue" filter="url(#dropshadow)"/>
-  <text x="520" y="406.66" font-size="10">Real Time Power (c2-ig-r3-b)</text>
+  <!-- Middle Container, Row 3: Real Time Power Usage Box -->
+  <rect x="520" y="376.66" width="180" height="93.33" fill="white" stroke="blue" filter="url(#dropshadow)"/>
+  <text x="530" y="406.66" font-size="10">Real Time Power (c2-ig-r3-b)</text>
   
   <!-- Right Container (c-2-r-2-c-3) inner grid -->
-  <!-- Original container: x=700, y=160, width=300, height=320 -->
-  <!-- With gap: x=710, y=170, width=280, height=300 -->
-  <!-- Divide vertically into three rows with 10px gaps; each row height ≈93.33 -->
-  
-  <!-- Row 1: Range Selector &amp; Filter -->
+  <!-- Positioned with a 10px gap from the middle container (middle container right edge = 520+180 = 700) -->
   <rect x="710" y="170" width="280" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
   <text x="720" y="200" font-size="10">Range Selector &amp; Filter (c3-ig-r1)</text>
   
-  <!-- Row 2: Icon Row (4 boxes) -->
+  <!-- Right Container, Row 2: Icon Row -->
   <!-- Row 2 begins at y = 170 + 93.33 + 10 = 273.33 -->
-  <!-- Available width in container = 280, minus 3 gaps of 10px gives 250px for boxes -->
-  <!-- Each icon box width = 250 / 4 = 62.5px -->
   <rect x="710" y="273.33" width="62.5" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
   <text x="715" y="303.33" font-size="10">Icon 1 (c3-ig-r2-c1-b)</text>
   <rect x="782.5" y="273.33" width="62.5" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
@@ -79,28 +63,23 @@
   <rect x="927.5" y="273.33" width="62.5" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
   <text x="932.5" y="303.33" font-size="10">Icon 4 (c3-ig-r2-c4-b)</text>
   
-  <!-- Row 3: Min Max Total Use -->
-  <!-- This row begins at y = 273.33 + 93.33 + 10 = 376.66 -->
+  <!-- Right Container, Row 3: Min Max Total Use -->
   <rect x="710" y="376.66" width="280" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
   <text x="720" y="406.66" font-size="10">Min Max Total Use (c3-ig-r3-b)</text>
   
-  <!-- Row 3 of Main Column -->
-  <!-- Left Box with Graph (c-2-r-3-c-1-b) -->
-  <!-- Original area: x=160, y=480, width=540, height=520 -->
-  <!-- With gap: x=170, y=490, width=520, height=500 -->
-  <rect x="170" y="490" width="520" height="500" fill="lavender" stroke="black" filter="url(#dropshadow)"/>
-  <text x="180" y="520" font-size="12">Graph Box (c-2-r-3-c-1-b)</text>
+  <!-- ROW 3 OF MAIN COLUMN -->
+  <!-- Graph Box (c-2-r-3-c-1-b) -->
+  <!-- Now inset 30px from the left (x = 160+30 = 190) and its width is reduced so that its right edge
+       (at x = 190+500 = 690) sits 20px left of the right column (which begins at x = 710) -->
+  <rect x="190" y="490" width="500" height="440" fill="lavender" stroke="black" filter="url(#dropshadow)"/>
+  <text x="200" y="520" font-size="12">Graph Box (c-2-r-3-c-1-b)</text>
   
-  <!-- Row 3 Right Column: two boxes stacked vertically -->
+  <!-- Row 3 Right Column: Two stacked boxes -->
   <!-- Upper Right: Current State (c-2-r-3-c-2-r-1-b) -->
-  <!-- Original area: x=700, y=480, width=300, height=200 -->
-  <!-- With gap: x=710, y=490, width=280, height=180 -->
   <rect x="710" y="490" width="280" height="180" fill="mistyrose" stroke="black" filter="url(#dropshadow)"/>
   <text x="720" y="520" font-size="12">Current State (c-2-r-3-c-2-r-1-b)</text>
   
   <!-- Lower Right: Energy Consumption (c-2-r-3-c-2-r-2-b) -->
-  <!-- Original area: x=700, y=680, width=300, height=320 -->
-  <!-- With gap: x=710, y=690, width=280, height=300 -->
-  <rect x="710" y="690" width="280" height="300" fill="lavender" stroke="black" filter="url(#dropshadow)"/>
+  <rect x="710" y="690" width="280" height="240" fill="lavender" stroke="black" filter="url(#dropshadow)"/>
   <text x="720" y="720" font-size="12">Energy Consumption (c-2-r-3-c-2-r-2-b)</text>
 </svg>
