@@ -61,7 +61,6 @@ Row 3 of Main Column:
        b. Energy Consumption (lower):
              - x=740, y=690, width=200, height=240, fill=lavender
 -->
-
 <svg viewBox="0 0 1000 1000" 
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
