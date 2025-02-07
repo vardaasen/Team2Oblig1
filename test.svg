@@ -147,7 +147,6 @@ Row 3 of Main Column:
     <!-- Optional label text -->
     <text x="230" y="520" font-size="12">Graph Box (c-2-r-3-c-1-b)</text>
   
-    <!-- GRAPH_PLACEHOLDER -->
     <!-- GRAPH_BOX_END -->
   
   <!-- Right Column of Row 3 -->
