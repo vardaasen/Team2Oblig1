@@ -134,7 +134,7 @@ Row 3 of Main Column:
     <!-- Optional background: a rectangle drawn with the same dimensions -->
     <rect x="220" y="490" width="500" height="440" fill="lavender" stroke="black" filter="url(#dropshadow)"/>
     <!-- The external SVG is referenced here -->
-    <image href="graph.svg"
+    <image href="Graph.svg"
            x="220" y="490"
            width="500" height="440"
            preserveAspectRatio="xMidYMid meet" />
