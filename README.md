@@ -1,27 +1,23 @@
 # Team2Oblig1
 
 ```mermaid
-flowchart TD
+flowchart LR
   subgraph Body
     nav["Nav Column\n(16vw)"]
     subgraph MainCol["Main Column\n(Article Container)"]
+      direction TB
       header["Header Row\n(16vh)"]
       
+      %% Row 2: arranged horizontally (LR) with reversed order:
+      %% Right Container Box, then Middle Container Box, then Left Container Box.
       subgraph Row2["Row 2"]
-        left["Left Container Box w/Image\n(34vw, 32vh)"]
-        
-        subgraph MiddleBox["Middle Container Box\n(Inner Grid)"]
-          status["Status Box\n(20vw, 10vh)"]
-          subgraph MidRow2["Row 2"]
-            consumption["Consumption Box\n(9vw, 10vh)"]
-            total["Total Charging Box\n(11vw, 10vh)"]
-          end
-          realtime["Real Time Power Usage Box\n(20vw, 10vh)"]
-        end
-        
+        direction LR
+        %% Right Container Box (appears left)
         subgraph RightBox["Right Container Box\n(Inner Grid)"]
+          direction TB
           range["Range Selector & Filter Icon\n(30vw, 5vh)"]
           subgraph MonthIcons["Month Icons Row"]
+            direction LR
             icon1["Icon 1\n(7.5vw, 15vh)"]
             icon2["Icon 2\n(7.5vw, 15vh)"]
             icon3["Icon 3\n(7.5vw, 15vh)"]
@@ -29,11 +25,29 @@ flowchart TD
           end
           minmax["Min Max Total Use Box\n(30vw, 10vh)"]
         end
+        
+        %% Middle Container Box (stays in the middle)
+        subgraph MiddleBox["Middle Container Box\n(Inner Grid)"]
+          direction TB
+          status["Status Box\n(20vw, 10vh)"]
+          subgraph MidRow2["Row 2"]
+            direction LR
+            consumption["Consumption Box\n(9vw, 10vh)"]
+            total["Total Charging Box\n(11vw, 10vh)"]
+          end
+          realtime["Real Time Power Usage Box\n(20vw, 10vh)"]
+        end
+        
+        %% Left Container Box (appears right)
+        left["Left Container Box w/Image\n(34vw, 32vh)"]
       end
       
+      %% Row 3: arranged horizontally so that the graph is left and the right column is side‑by‑side.
       subgraph Row3["Row 3"]
+        direction LR
         graphSVG["Left Box w/Graph SVG\n(54vw, 52vh)"]
         subgraph RightCol["Right Column\n(Two Rows)"]
+          direction TB
           current["Current State Container Box\n(30vw, 20vh)"]
           energy["Energy Consumption Container Box\n(30vw, 32vh)"]
         end
