@@ -21,8 +21,12 @@ if (graphContentMatch) {
 
 // Replace everything between the markers (inclusive)
 const updatedSvg = testSvg.replace(
-  /<!-- GRAPH_BOX_START -->[\s\S]*?<!-- GRAPH_BOX_END -->/,
-  `<!-- GRAPH_BOX_START -->\n<svg x="220" y="490" width="500" height="440" viewBox="0 0 670 360">\n${graphSvg}\n</svg>\n<!-- GRAPH_BOX_END -->`
+  /<!-- GRAPH_BOX_CONTENT_START -->[\s\S]*?<!-- GRAPH_BOX_CONTENT_END -->/,
+  `<!-- GRAPH_BOX_CONTENT_START -->
+<g transform="translate(220,490) scale(${500/670},${440/360})">
+${graphSvg}
+</g>
+<!-- GRAPH_BOX_CONTENT_END -->`
 );
 
 // Write the updated SVG to a new file
