@@ -130,11 +130,11 @@ Row 3 of Main Column:
   
    <!-- ROW 3 of Main Column -->
   <!-- Graph Box (c-2-r-3-c-1) with linked external SVG -->
-  <a href="graph.svg" target="_blank">
+  <a href="https://raw.githubusercontent.com/vardaasen/Team2Oblig1/refs/heads/main/Graph.svg" target="_blank">
     <!-- Optional background: a rectangle drawn with the same dimensions -->
     <rect x="220" y="490" width="500" height="440" fill="lavender" stroke="black" filter="url(#dropshadow)"/>
     <!-- The external SVG is referenced here -->
-    <image href="Graph.svg"
+    <image href="https://raw.githubusercontent.com/vardaasen/Team2Oblig1/refs/heads/main/Graph.svg"
            x="220" y="490"
            width="500" height="440"
            preserveAspectRatio="xMidYMid meet" />
