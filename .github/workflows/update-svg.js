@@ -1,32 +1,48 @@
 const fs = require('fs');
 const path = require('path');
 
-// Adjust the paths: from .github/workflows, two levels up is the repo root.
-const testSvgPath = path.join(__dirname, '../../test.svg');
-const graphSvgPath = path.join(__dirname, '../../Graph.svg');
-const outputSvgPath = path.join(__dirname, '../../generated.svg');
+// Define paths
+const testSvgPath = path.join(__dirname, 'test.svg');
+const graphSvgPath = path.join(__dirname, 'Graph.svg');
+const outputSvgPath = path.join(__dirname, 'generated.svg');
 
 // Read the files
 let testSvg = fs.readFileSync(testSvgPath, 'utf-8');
 let graphSvg = fs.readFileSync(graphSvgPath, 'utf-8');
 
-// Optionally remove the XML declaration from Graph.svg if present
+// Remove XML declaration if present
 graphSvg = graphSvg.replace(/<\?xml.*?\?>/, '').trim();
 
-// Optionally, remove the outer <svg> tags if you want just the inner content
+// Remove outer <svg> tags (if desired) and extract inner content
 const graphContentMatch = graphSvg.match(/<svg[^>]*>([\s\S]*?)<\/svg>/);
 if (graphContentMatch) {
   graphSvg = graphContentMatch[1].trim();
 }
 
-// Replace everything between the markers (inclusive)
+// Define original and target dimensions
+const targetWidth = 500;
+const targetHeight = 440;
+const originalWidth = 670;
+const originalHeight = 360;
+
+// Calculate uniform scale factor and offsets
+const scaleFactor = Math.min(targetWidth / originalWidth, targetHeight / originalHeight);
+const scaledWidth = originalWidth * scaleFactor;   // Expect ~500
+const scaledHeight = originalHeight * scaleFactor; // Expect ~268.67
+const offsetY = (targetHeight - scaledHeight) / 2;   // Center vertically
+
+// Build the transform string: note that the border box is at (220,490)
+const transform = `translate(220,${490 + offsetY}) scale(${scaleFactor})`;
+
+// Replace the content between markers with the border and transformed graph content
 const updatedSvg = testSvg.replace(
-  /<!-- GRAPH_BOX_CONTENT_START -->[\s\S]*?<!-- GRAPH_BOX_CONTENT_END -->/,
-  `<!-- GRAPH_BOX_CONTENT_START -->
-<g transform="translate(220,490) scale(${500/670},${440/360})">
+  /<!-- GRAPH_BOX_START -->[\s\S]*?<!-- GRAPH_BOX_END -->/,
+  `<!-- GRAPH_BOX_START -->
+<rect x="220" y="490" width="500" height="440" fill="lavender" stroke="black" filter="url(#dropshadow)"/>
+<g transform="${transform}">
 ${graphSvg}
 </g>
-<!-- GRAPH_BOX_CONTENT_END -->`
+<!-- GRAPH_BOX_END -->`
 );
 
 // Write the updated SVG to a new file
