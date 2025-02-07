@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outline the whole body -->
+  <rect x="0" y="0" width="1000" height="1000" fill="none" stroke="black" />
+
+  <!-- Nav Column (left, 16vw ≈ 160px wide) -->
+  <rect x="0" y="0" width="160" height="1000" fill="#e0e0e0" stroke="black" />
+  <text x="10" y="20" font-size="12">Nav Column</text>
+
+  <!-- Main Column (Article Container) -->
+  <!-- This occupies the remainder: 840px wide (1000 - 160) -->
+  <rect x="160" y="0" width="840" height="1000" fill="none" stroke="black" />
+
+  <!-- Inside Main Column, we split the article container vertically into 3 rows -->
+  <!-- Header Row: 16vh (≈160px tall) -->
+  <rect x="160" y="0" width="840" height="160" fill="#f0f0f0" stroke="black" />
+  <text x="170" y="20" font-size="12">Header Row (c-2-r-1)</text>
+
+  <!-- Row 2: 32vh tall (≈320px) -->
+  <!-- It is subdivided horizontally into three columns -->
+  <!-- Left Container (c-2-r-2-c-1-b): 34vw ≈ 340px wide -->
+  <rect x="160" y="160" width="340" height="320" fill="#d0e0f0" stroke="black" />
+  <text x="170" y="180" font-size="12">Left Container Box w/Image (c-2-r-2-c-1-b)</text>
+
+  <!-- Middle Container (c-2-r-2-c-2): remaining width 200px (840 - 340 - 300) -->
+  <rect x="500" y="160" width="200" height="320" fill="#f0d0e0" stroke="black" />
+  <text x="510" y="180" font-size="12">Middle Container (c-2-r-2-c-2)</text>
+
+  <!-- Right Container (c-2-r-2-c-3): 30vw ≈ 300px wide -->
+  <rect x="700" y="160" width="300" height="320" fill="#e0f0d0" stroke="black" />
+  <text x="710" y="180" font-size="12">Right Container (c-2-r-2-c-3)</text>
+
+  <!-- Inside the Middle Container, create an inner grid layout with three rows -->
+  <!-- We assume a vertical margin of 10px at the top and bottom so that the inner grid totals 300px tall -->
+  <!-- Inner Grid Row 1: Status Box (c2-ig-r1-b): (20vw x 10vh) ≈ (200px × 100px) -->
+  <rect x="500" y="170" width="200" height="100" fill="#ffffff" stroke="blue" />
+  <text x="510" y="190" font-size="10">Status Box (c2-ig-r1-b)</text>
+
+  <!-- Inner Grid Row 2: Two boxes side-by-side (total width 200px, height 100px) -->
+  <!-- Consumption Box (c2-ig-r2c1-b): 9vw ≈ 90px wide -->
+  <rect x="500" y="270" width="90" height="100" fill="#ffffff" stroke="blue" />
+  <text x="505" y="290" font-size="10">Consumption (c2-ig-r2c1-b)</text>
+  
+  <!-- Total Charging Box (c2-ig-r2c2-b): 11vw ≈ 110px wide -->
+  <rect x="590" y="270" width="110" height="100" fill="#ffffff" stroke="blue" />
+  <text x="595" y="290" font-size="10">Total Charging (c2-ig-r2c2-b)</text>
+
+  <!-- Inner Grid Row 3: Real Time Power Usage Box (c2-ig-r3-b): (200px × 100px) -->
+  <rect x="500" y="370" width="200" height="100" fill="#ffffff" stroke="blue" />
+  <text x="510" y="390" font-size="10">Real Time Power (c2-ig-r3-b)</text>
+
+  <!-- Inside the Right Container, another inner grid layout with three rows -->
+  <!-- Assume the same top/bottom margin of 10px, with total inner grid height 300px -->
+  <!-- Inner Grid Row 1: Range Selector / Filter (c3-ig-r1): (30vw x 5vh) ≈ (300px × 50px) -->
+  <rect x="700" y="170" width="300" height="50" fill="#ffffff" stroke="red" />
+  <text x="710" y="190" font-size="10">Range Selector &amp; Filter (c3-ig-r1)</text>
+
+  <!-- Inner Grid Row 2: Icon row with 4 boxes, each (7.5vw x 15vh) ≈ (75px × 150px) -->
+  <rect x="700" y="220" width="75" height="150" fill="#ffffff" stroke="red" />
+  <text x="705" y="240" font-size="10">Icon 1 (c3-ig-r2-c1-b)</text>
+  
+  <rect x="775" y="220" width="75" height="150" fill="#ffffff" stroke="red" />
+  <text x="780" y="240" font-size="10">Icon 2 (c3-ig-r2-c2-b)</text>
+  
+  <rect x="850" y="220" width="75" height="150" fill="#ffffff" stroke="red" />
+  <text x="855" y="240" font-size="10">Icon 3 (c3-ig-r2-c3-b)</text>
+  
+  <rect x="925" y="220" width="75" height="150" fill="#ffffff" stroke="red" />
+  <text x="930" y="240" font-size="10">Icon 4 (c3-ig-r2-c4-b)</text>
+
+  <!-- Inner Grid Row 3: Min Max Total Use Box (c3-ig-r3-b): (300px × 100px) -->
+  <rect x="700" y="370" width="300" height="100" fill="#ffffff" stroke="red" />
+  <text x="710" y="390" font-size="10">Min Max Total Use (c3-ig-r3-b)</text>
+
+  <!-- Row 3: This row occupies 52vh ≈ 520px in height -->
+  <!-- It is divided into a left box and a right column -->
+  <!-- Left Box with Graph (c-2-r-3-c-1-b): (54vw × 52vh) ≈ (540px × 520px) -->
+  <rect x="160" y="480" width="540" height="520" fill="#d0d0f0" stroke="black" />
+  <text x="170" y="500" font-size="12">Graph Box (c-2-r-3-c-1-b)</text>
+
+  <!-- Right Column in Row 3: fixed at 300px wide -->
+  <!-- Upper Right: Current State Container (c-2-r-3-c-2-r-1-b): (300px × 20vh) ≈ (300px × 200px) -->
+  <rect x="700" y="480" width="300" height="200" fill="#f0d0d0" stroke="black" />
+  <text x="710" y="500" font-size="12">Current State (c-2-r-3-c-2-r-1-b)</text>
+  
+  <!-- Lower Right: Energy Consumption Container (c-2-r-3-c-2-r-2-b): (300px × 32vh) ≈ (300px × 320px) -->
+  <rect x="700" y="680" width="300" height="320" fill="#d0f0d0" stroke="black" />
+  <text x="710" y="700" font-size="12">Energy Consumption (c-2-r-3-c-2-r-2-b)</text>
+</svg>
