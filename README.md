@@ -1,5 +1,6 @@
 # Team2Oblig1
 
+```mermaid
 flowchart TD
   subgraph Body
     nav["Nav Column\n(16vw)"]
@@ -81,6 +82,7 @@ class minmax minmaxStyle;
 class graphSVG graphSVGStyle;
 class current currentStyle;
 class energy energyStyle;
+```
 
 ***
 
