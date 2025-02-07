@@ -138,7 +138,7 @@ Row 3 of Main Column:
     <!-- The external SVG is referenced here and does not work on github because they sanitize -->
     <image 
       crossorigin="anonymous"
-      xlink:href="https://raw.githubusercontent.com/vardaasen/Team2Oblig1/main/Graph.svg"
+      xlink:href="Graph.svg"
        x="220" y="490"
        width="500" height="440"
        preserveAspectRatio="xMidYMid meet" />
