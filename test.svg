@@ -114,16 +114,16 @@ Row 3 of Main Column:
   
   <!-- Row 2: Icon Row (4 boxes) -->
   <rect x="740" y="273.33" width="42.5" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
-  <text x="745" y="303.33" font-size="10">Icon 1 (c3-ig-r2-c1-b)</text>
+  <text x="745" y="303.33" font-size="10">Icon 1 (c3-ig-r2-c1-b) ☀️</text>
   
   <rect x="792.5" y="273.33" width="42.5" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
-  <text x="797.5" y="303.33" font-size="10">Icon 2 (c3-ig-r2-c2-b)</text>
+  <text x="797.5" y="303.33" font-size="10">Icon 2 (c3-ig-r2-c2-b) ☀️</text>
   
   <rect x="845" y="273.33" width="42.5" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
-  <text x="850" y="303.33" font-size="10">Icon 3 (c3-ig-r2-c3-b)</text>
+  <text x="850" y="303.33" font-size="10">Icon 3 (c3-ig-r2-c3-b) ⛅</text>
   
   <rect x="897.5" y="273.33" width="42.5" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
-  <text x="902.5" y="303.33" font-size="10">Icon 4 (c3-ig-r2-c4-b)</text>
+  <text x="902.5" y="303.33" font-size="10">Icon 4 (c3-ig-r2-c4-b) 🌤️</text>
   
   <!-- Row 3: Min Max Total Use -->
   <rect x="740" y="376.66" width="200" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
