@@ -129,24 +129,23 @@ Row 3 of Main Column:
   <rect x="740" y="376.66" width="200" height="93.33" fill="white" stroke="red" filter="url(#dropshadow)"/>
   <text x="750" y="406.66" font-size="10">Min Max Total Use (c3-ig-r3-b)</text>
   
-   <!-- ROW 3 of Main Column -->
-   <!-- Graph Box (c-2-r-3-c-1) with linked external SVG -->
-    <!-- GRAPH_BOX_START -->
-    <!-- Optional background: a rectangle drawn with the same dimensions -->
-    <rect x="220" y="490" width="500" height="440" fill="lavender" stroke="black" filter="url(#dropshadow)"/>
-    <!-- GRAPH_BOX_CONTENT_START -->
-    <!-- The external SVG is referenced here and does not work on github because they sanitize -->
-    <image 
+  <!-- ROW 3 of Main Column -->
+  <!-- Graph Box (c-2-r-3-c-1) with linked external SVG -->
+  <!-- GRAPH_BOX_START -->
+  <!-- Optional background: a rectangle drawn with the same dimensions -->
+  <rect x="220" y="490" width="500" height="440" fill="lavender" stroke="black" filter="url(#dropshadow)"/>
+  <!-- GRAPH_BOX_CONTENT_START -->
+  <!-- The external SVG is referenced here and does not work on github because they sanitize -->
+  <image 
       crossorigin="anonymous"
       xlink:href="Graph.svg"
-       x="220" y="490"
-       width="500" height="440"
-       preserveAspectRatio="xMidYMid meet" />
-    <!-- GRAPH_BOX_CONTENT_END -->
-    <!-- Optional label text -->
-    <text x="230" y="520" font-size="12">Graph Box (c-2-r-3-c-1-b)</text>
-    
-    <!-- GRAPH_BOX_END -->
+      x="220" y="490"
+      width="500" height="440"
+      preserveAspectRatio="xMidYMid meet" />
+  <!-- GRAPH_BOX_CONTENT_END -->
+  <!-- Optional label text -->
+  <text x="230" y="520" font-size="12">Graph Box (c-2-r-3-c-1-b)</text>  
+  <!-- GRAPH_BOX_END -->
   
   <!-- Right Column of Row 3 -->
   <rect x="740" y="490" width="200" height="180" fill="mistyrose" stroke="black" filter="url(#dropshadow)"/>
