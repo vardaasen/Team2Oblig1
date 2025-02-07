@@ -1,0 +1,34 @@
+name: Update Composite SVG
+
+on:
+  push:
+    paths:
+      - 'test.svg'
+      - 'Graph.svg'
+
+jobs:
+  update-svg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies (if any)
+        run: npm install
+
+      - name: Run SVG update script
+        run: node .github/workflows/update-svg.js
+
+      # Optionally commit and push the updated generated.svg back to the repo
+      - name: Commit updated SVG if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add generated.svg
+          git diff-index --quiet HEAD || git commit -m "Auto-update generated.svg"
+          git push
