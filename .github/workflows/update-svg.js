@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 // Define paths
-const testSvgPath = path.join(__dirname, 'test.svg');
-const graphSvgPath = path.join(__dirname, 'Graph.svg');
-const outputSvgPath = path.join(__dirname, 'generated.svg');
+const testSvgPath = path.join(__dirname, '../../test.svg');
+const graphSvgPath = path.join(__dirname, '../../Graph.svg');
+const outputSvgPath = path.join(__dirname, '../../generated.svg');
 
 // Read the files
 let testSvg = fs.readFileSync(testSvgPath, 'utf-8');
