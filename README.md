@@ -1,5 +1,5 @@
 # Team2Oblig1
-![Diagram](test.svg)
+![Composite Graph](https://raw.githubusercontent.com/your-username/your-repo/main/generated.svg)
 ***
 
 ```plaintext
